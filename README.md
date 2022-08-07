@@ -1,5 +1,14 @@
 ## VPC Endpoint Demo 
 
+note this aws s3 ls can be timeout in case of isolated private ec2 
+```bash 
+aws s3 ls 
+```
+then need to specifiy a bucket 
+```bash 
+aws s3 ls s3://bucket-in-the-same-region-ec2/ 
+```
+
 ## VPC Endpoint Types 
 - Gateway endpoint 
 - Interface endpoint 
@@ -49,9 +58,7 @@ vpc.addInterfaceEndpoint("Ec2Message", {
   privateDnsEnabled: true,
 });
 ```
-can further add security for the endpoints 
-
-create an ec2 in a isolated subnet without nat 
+can further add security for the endpoints. Create an ec2 in a isolated subnet without nat 
 ```tsx 
  new aws_ec2.Instance(this, "PrivateEc2", {
       instanceName: "PrivateEc2",
