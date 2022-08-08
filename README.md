@@ -9,6 +9,9 @@ then need to specifiy a bucket
 aws s3 ls s3://bucket-in-the-same-region-ec2/ 
 ```
 
+![aws_devops-Expriment drawio](https://user-images.githubusercontent.com/20411077/183345188-3b93eba7-b349-4916-a32c-19acf529ec0d.png)
+
+
 ## VPC Endpoint Types 
 - Gateway endpoint 
 - Interface endpoint 
